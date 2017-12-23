@@ -8,13 +8,7 @@ let
 
 in {
   options.services.mbpfan = {
-    enable = mkOption {
-      default = false;
-      type = types.bool;
-      description = ''
-        Whether to enable the mbpfan daemon.
-      '';
-    };
+    enable = mkEnableOption "mbpfan, fan controller daemon for MacBooks (not just MacBook Pro, despite the name)";
 
     package = mkOption {
       type = types.package;
